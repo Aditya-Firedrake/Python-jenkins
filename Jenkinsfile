@@ -5,13 +5,13 @@ pipeline {
         VENV_DIR = 'venv'
     }
 
-    stages {
-        stage('Checkout') {
-            steps {
-                echo 'Checking out source code...'
-                git 'https://github.com/Aditya-Firedrake/Python-jenkins.git'
-            }
-        }
+  stage('Checkout') {
+    steps {
+        echo 'Checking out source code...'
+        git branch: 'main', url: 'https://github.com/Aditya-Firedrake/Python-jenkins.git'
+    }
+}
+
 
         stage('Set Up Python Env') {
             steps {
